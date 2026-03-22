@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donna — Create Account</title>
+  <meta name="description" content="Create a Donna account to start using the hand-tracking writing canvas." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-animated"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-icon">✍️</div>
+        <div class="logo-text">Don<span>na</span></div>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="auth-heading">Create account</h1>
+      <p class="auth-sub">Start writing in the air with your fingers</p>
+
+      <!-- Form -->
+      <form id="registerForm" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Min. 6 characters" autocomplete="new-password" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="registerBtn">
+          Create Account
+        </button>
+
+        <div id="toast" class="toast"></div>
+      </form>
+
+      <!-- Login link -->
+      <div class="divider">or</div>
+      <div style="text-align:center; font-size:0.88rem; color:var(--text-secondary)">
+        Already have an account?
+        <button class="btn-link" onclick="location.href='index.html'">Sign in</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
